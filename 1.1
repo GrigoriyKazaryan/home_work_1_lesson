@@ -1,0 +1,56 @@
+#Задача № 1
+
+a = 'hello world'
+print(a)
+
+b = 0.5
+print(type(b))
+c = 24print(type(c))
+n_1 = 45
+n_2 = 90
+print(bool(n_1 < n_2))
+
+n_3 = 0.09
+n_4 = 0.11
+print(bool(n_3 == n_4))
+
+number_1 = float(input('введите первое число: '))
+number_2 = float(input('введите второе число: '))
+print((number_1 * number_2) + 123)
+
+#Задача 2
+
+time = int(input('Введите время в секундах: '))
+a = time // 3600 # время в часах
+b = time // 60 # время в минутах
+c = time % 10 # остаток в секундах
+print(f' чч:мм:сс={a}:{b}:{c} ')
+
+#Задача 3
+
+n = int(input('Задайте значение для переменной x=: '))
+n = n + n**2 + n**3
+print (f'x = {n}')
+
+# # Задача 4
+
+a = int(input('Введите любое положительное целое число: '))
+m = a%10
+a = a//10
+while a > 0:
+    if a%10 > m:
+        m = a%10
+    a = a//10
+print(m)
+
+#Задача 5
+
+proceeds = int(input('Введите значения выручки: '))
+coast = int(input('Введите значения издержек: '))
+profit = proceeds - coast
+if proceeds > coast:
+    print(f' Фирма отработала с прибылью; Рентабельность прибыли = {profit/proceeds}')
+    empl = int(input('Введите число сотрудников в фирме: '))
+    print(f' Соотнешение прибыли на одного сотрудника составляет: {profit/empl}')
+elif proceeds < coast:
+    print('Издержек больше прибыли!')
